@@ -49,6 +49,30 @@ export async function POST(request: NextRequest) {
     const upstreamOrigin =
       resolveUpstreamOrigin(request);
 
+    const referer = request.headers.get("referer");
+
+    // INVISIBLE SOURCE CAPTURE
+    // Records which site + page the enquiry was submitted from
+    // without any visible form field.
+    const payload = {
+      ...body,
+      sourceDomain:
+        body.sourceDomain ||
+        (() => {
+          try {
+            return new URL(referer || upstreamOrigin).hostname;
+          } catch {
+            return undefined;
+          }
+        })(),
+      sourceUrl:
+        body.sourceUrl ||
+        body.pageUrl ||
+        referer ||
+        upstreamOrigin ||
+        undefined,
+    };
+
     const response = await fetch(UPSTREAM_ENDPOINT, {
       method: "POST",
 
@@ -56,9 +80,10 @@ export async function POST(request: NextRequest) {
         "Content-Type": "application/json",
         Accept: "application/json",
         Origin: upstreamOrigin,
+        ...(referer ? { Referer: referer } : {}),
       },
 
-      body: JSON.stringify(body),
+      body: JSON.stringify(payload),
 
       cache: "no-store",
     });

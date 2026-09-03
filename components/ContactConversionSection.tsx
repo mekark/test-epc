@@ -227,6 +227,7 @@ export default function ContactConversionSection() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify({
           name: formValues.name.trim(),
@@ -239,6 +240,8 @@ export default function ContactConversionSection() {
           startTimeline: formValues.startTimeline.trim(),
           budget: formValues.budget.trim(),
           message: formValues.requirements.trim(),
+          sourceUrl: window.location.href,
+          pageUrl: window.location.href,
         }),
       });
 

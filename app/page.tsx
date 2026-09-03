@@ -254,6 +254,8 @@ export default function Home() {
         budget: formValues.budget.trim(),
         message: formValues.requirements.trim(),
         service: formValues.projectType.trim(),
+        sourceUrl: window.location.href,
+        pageUrl: window.location.href,
       };
 
       console.log("REQUEST PAYLOAD:", requestPayload);
@@ -261,6 +263,7 @@ export default function Home() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
 
         // FIXED API PAYLOAD
