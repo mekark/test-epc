@@ -49,9 +49,9 @@ const FORM_ENDPOINT = "/api/enquiry-form";
 const THANK_YOU_URL = "https://www.mekark.com/thank-you";
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const LABEL_CLASSNAME =
-  "mb-3 block text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#18181B]";
+  "mb-1.5 block text-[0.64rem] font-semibold uppercase tracking-[0.16em] text-[#18181B]";
 const FIELD_CLASSNAME =
-  "h-[3.6rem] w-full rounded-xl border border-[#E4E4E7] bg-[#FAFAFA]/78 px-4.5 text-[0.98rem] text-[#18181B] shadow-[inset_0_1px_0_rgba(255,255,255,0.72)] outline-none transition-[border-color,box-shadow,background-color] duration-300 placeholder:text-[#52525B]/88 hover:border-[#C4161C]/35 focus:border-[#C4161C] focus:bg-[#FFFFFF] focus:shadow-[0_0_0_4px_rgba(196,22,28,0.16)]";
+  "h-9 w-full rounded-lg border border-[#E4E4E7] bg-[#FAFAFA]/78 px-3 text-[0.83rem] text-[#18181B] shadow-[inset_0_1px_0_rgba(255,255,255,0.72)] outline-none transition-[border-color,box-shadow,background-color] duration-300 placeholder:text-[#52525B]/88 hover:border-[#C4161C]/35 focus:border-[#C4161C] focus:bg-[#FFFFFF] focus:shadow-[0_0_0_4px_rgba(196,22,28,0.16)]";
 
 type FormValues = {
   name: string;
@@ -266,7 +266,7 @@ export default function ContactConversionSection() {
   };
 
   return (
-    <section className="relative overflow-hidden border-t border-[#E4E4E7]/10 bg-[#09090B] pb-24 pt-20 md:pb-32 md:pt-40">
+    <section className="relative overflow-hidden border-t border-[#E4E4E7]/10 bg-[#09090B] pb-12 pt-20 md:pb-16 md:pt-24">
       {/* Engineered Technical Background */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.35] mix-blend-screen">
         <svg className="absolute h-full w-full" xmlns="http://www.w3.org/2000/svg">
@@ -332,7 +332,7 @@ export default function ContactConversionSection() {
       </div>
 
       <div className="container relative z-10 mx-auto max-w-7xl px-4">
-        <div className="flex flex-col gap-12 lg:gap-14">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:items-start lg:gap-14">
           <motion.div
             initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
             whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
@@ -341,23 +341,23 @@ export default function ContactConversionSection() {
               duration: prefersReducedMotion ? 0 : 0.65,
               ease: EASE_OUT,
             }}
-            className="mx-auto max-w-3xl text-center"
+            className="self-start"
           >
             <div className="text-[0.72rem] font-semibold uppercase tracking-[0.38em] text-[#C4161C]">
               Project Consultation
             </div>
-            <h2 className="mt-5 text-[2.6rem] font-semibold tracking-[-0.03em] text-[#FFFFFF] md:text-[3.35rem] md:leading-[1.04]">
+            <h2 className="mt-5 text-[2.4rem] font-semibold tracking-[-0.03em] text-[#FFFFFF] md:text-[2.9rem] md:leading-[1.06]">
               Start Your Factory Construction Project
             </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-[0.98rem] leading-7 text-[#E4E4E7] md:text-lg md:leading-8">
+            <p className="mt-6 max-w-xl text-[0.98rem] leading-7 text-[#E4E4E7] md:text-lg md:leading-8">
               Speak with our team about your manufacturing facility, industrial plant, utility infrastructure, or heavy engineering project requirements. We deliver turnkey solutions with a focus on execution quality, safety, and long-term operational value.
             </p>
 
-            <p className="mx-auto mt-7 max-w-2xl text-[0.98rem] leading-7 text-[#E4E4E7] md:text-lg md:leading-8">
+            <p className="mt-5 max-w-xl text-[0.98rem] leading-7 text-[#E4E4E7] md:text-lg md:leading-8">
               Discuss your manufacturing facility, industrial plant, or heavy infrastructure requirement with our team.
             </p>
 
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <div className="mt-8 flex flex-wrap gap-3">
               {CAPABILITY_CHIPS.map((chip) => (
                 <span
                   key={chip}
@@ -368,7 +368,7 @@ export default function ContactConversionSection() {
               ))}
             </div>
 
-            <div className="mx-auto mt-10 max-w-xl space-y-4 text-left">
+            <div className="mt-10 max-w-xl space-y-4">
               <div className="rounded-[1rem] border border-[#E4E4E7]/12 bg-[#18181B]/48 p-5">
                 <div className="flex items-start gap-3">
                   <Mail className="mt-0.5 h-4 w-4 flex-none text-[#C4161C]" />
@@ -385,7 +385,7 @@ export default function ContactConversionSection() {
 
             </div>
 
-            <div className="mx-auto mt-10 max-w-2xl border-t border-[#E4E4E7]/12 pt-8 text-left">
+            {/* <div className="mt-10 max-w-xl border-t border-[#E4E4E7]/12 pt-8">
               <div className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#C4161C]">
                 Why Teams Enquire
               </div>
@@ -397,7 +397,7 @@ export default function ContactConversionSection() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </motion.div>
 
           <motion.div
@@ -413,25 +413,25 @@ export default function ContactConversionSection() {
             className="relative w-full scroll-mt-28 md:scroll-mt-32"
           >
             <div className="absolute inset-x-8 top-5 h-10 rounded-full bg-[#C4161C]/12 blur-2xl" />
-            <div className="relative mx-auto w-full max-w-5xl overflow-hidden rounded-[1.35rem] border border-[#E4E4E7] bg-[#FFFFFF] p-5 shadow-[0_34px_90px_-52px_rgba(24,24,27,0.22)] sm:p-6 md:rounded-[1.5rem] md:p-10 lg:p-12">
+            <div className="relative w-full overflow-hidden rounded-[1rem] border border-[#E4E4E7] bg-[#FFFFFF] p-3.5 shadow-[0_34px_90px_-52px_rgba(24,24,27,0.22)] sm:p-4 md:rounded-[1.15rem] md:p-5">
               <div className="absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#C4161C,rgba(196,22,28,0.16),transparent)]" />
               <div className="relative">
-                <div className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-[#C4161C]">
+                <div className="text-[0.64rem] font-semibold uppercase tracking-[0.28em] text-[#C4161C]">
                   Submit Requirements
                 </div>
-                <h3 className="mt-4 text-[1.7rem] font-semibold tracking-[-0.03em] text-[#09090B] md:text-[2.2rem]">
+                <h3 className="mt-2 text-[1.2rem] font-semibold tracking-[-0.03em] text-[#09090B] md:text-[1.4rem]">
                   Request a Project Consultation
                 </h3>
-                <p className="mt-3 max-w-lg text-sm leading-7 text-[#52525B]">
+                <p className="mt-1.5 text-[0.83rem] leading-5 text-[#52525B]">
                   Share your project details and our team will contact you to discuss execution scope, timelines, and industrial infrastructure requirements.
                 </p>
 
-                <div className="mt-8 rounded-[1.15rem] border border-[#E4E4E7]/80 bg-[#FAFAFA]/72 p-5 md:p-7 lg:p-8">
-                  <div className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[#52525B]">
+                <div className="mt-4 rounded-[0.8rem] border border-[#E4E4E7]/80 bg-[#FAFAFA]/72 p-3.5 md:p-4">
+                  <div className="text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-[#52525B]">
                     Project Intake Form
                   </div>
-                  <form className="mt-7 space-y-7" onSubmit={handleSubmit} noValidate>
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7">
+                  <form className="mt-4 space-y-4" onSubmit={handleSubmit} noValidate>
+                    <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
                       <FormField
                         id="name"
                         label={
@@ -455,7 +455,7 @@ export default function ContactConversionSection() {
                       />
                     </div>
 
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7">
+                    <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
                       <FormField
                         id="phoneNumber"
                         label={
@@ -482,7 +482,7 @@ export default function ContactConversionSection() {
                       />
                     </div>
 
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7">
+                    <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
                       <FormField
                         id="projectLocation"
                         label="Project Location"
@@ -524,10 +524,7 @@ export default function ContactConversionSection() {
                     </div>
 
                     <div>
-                      <label
-                        htmlFor="sqft"
-                        className="mb-2 block text-sm font-medium text-black/80"
-                      >
+                      <label htmlFor="sqft" className={LABEL_CLASSNAME}>
                         Project sq.ft
                         <span className="ml-1 text-[#FF6B6B]">*</span>
                       </label>
@@ -537,52 +534,35 @@ export default function ContactConversionSection() {
                         name="sqft"
                         value={formValues.sqft}
                         onChange={handleInputChange}
-                        className={`h-[46px] w-full rounded-xl border border-white/10 bg-white/10 px-4 text-sm text-black outline-none backdrop-blur-md transition-all duration-300 focus:border-[#C4161C] focus:bg-white/15 ${formErrors.sqft
-                          ? "border-[#FF6B6B] focus:border-[#FF6B6B]"
+                        aria-invalid={Boolean(formErrors.sqft)}
+                        className={`${FIELD_CLASSNAME} ${formErrors.sqft
+                          ? "border-[#C4161C] bg-[#FFF5F5] focus:shadow-[0_0_0_4px_rgba(196,22,28,0.12)]"
                           : ""
                           }`}
                       >
-                        <option value="" className="text-black">
+                        <option value="" disabled>
                           Select Project Size
                         </option>
-
-                        <option
-                          value="10,000 - 20,000 Sq.ft"
-                          className="text-black"
-                        >
+                        <option value="10,000 - 20,000 Sq.ft">
                           10,000 - 20,000 Sq.ft
                         </option>
-
-                        <option
-                          value="20,000 - 30,000 Sq.ft"
-                          className="text-black"
-                        >
+                        <option value="20,000 - 30,000 Sq.ft">
                           20,000 - 30,000 Sq.ft
                         </option>
-
-                        <option
-                          value="30,000 - 50,000 Sq.ft"
-                          className="text-black"
-                        >
+                        <option value="30,000 - 50,000 Sq.ft">
                           30,000 - 50,000 Sq.ft
                         </option>
-
-                        <option
-                          value="50,000+ Sq.ft"
-                          className="text-black"
-                        >
-                          50,000+ Sq.ft
-                        </option>
+                        <option value="50,000+ Sq.ft">50,000+ Sq.ft</option>
                       </select>
 
                       {formErrors.sqft ? (
-                        <p className="mt-1 text-xs text-[#FF6B6B]">
+                        <p className="mt-2 text-sm text-[#C4161C]">
                           {formErrors.sqft}
                         </p>
                       ) : null}
                     </div>
 
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7">
+                    <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
                       <div>
                         <label htmlFor="startTimeline" className={LABEL_CLASSNAME}>
                           Project Start Timeline
@@ -655,12 +635,12 @@ export default function ContactConversionSection() {
                       <textarea
                         id="requirements"
                         name="requirements"
-                        rows={7}
+                        rows={2}
                         placeholder="Outline your project scope, facility type, timelines, and utility requirements."
                         value={formValues.requirements}
                         onChange={handleInputChange}
                         aria-invalid={Boolean(formErrors.requirements)}
-                        className={`w-full rounded-xl border border-[#E4E4E7] bg-[#FAFAFA]/78 p-4.5 text-[0.98rem] text-[#18181B] shadow-[inset_0_1px_0_rgba(255,255,255,0.72)] outline-none transition-[border-color,box-shadow,background-color] duration-300 placeholder:text-[#52525B]/88 hover:border-[#C4161C]/35 focus:border-[#C4161C] focus:bg-[#FFFFFF] focus:shadow-[0_0_0_4px_rgba(196,22,28,0.16)] ${formErrors.requirements
+                        className={`w-full rounded-lg border border-[#E4E4E7] bg-[#FAFAFA]/78 p-3 text-[0.83rem] text-[#18181B] shadow-[inset_0_1px_0_rgba(255,255,255,0.72)] outline-none transition-[border-color,box-shadow,background-color] duration-300 placeholder:text-[#52525B]/88 hover:border-[#C4161C]/35 focus:border-[#C4161C] focus:bg-[#FFFFFF] focus:shadow-[0_0_0_4px_rgba(196,22,28,0.16)] ${formErrors.requirements
                           ? "border-[#C4161C] bg-[#FFF5F5] focus:shadow-[0_0_0_4px_rgba(196,22,28,0.12)]"
                           : ""
                           }`}
@@ -681,11 +661,11 @@ export default function ContactConversionSection() {
                       </div>
                     ) : null}
 
-                    <div className="flex flex-col gap-4 border-t border-[#E4E4E7]/80 pt-7 md:flex-row md:items-center md:justify-end">
+                    <div className="flex flex-col gap-3 border-t border-[#E4E4E7]/80 pt-4 md:flex-row md:items-center md:justify-end">
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#C4161C] px-7 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-[#FFFFFF] shadow-[0_18px_34px_-20px_rgba(196,22,28,0.72)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#09090B] disabled:cursor-not-allowed disabled:opacity-70 md:w-auto md:min-w-[16rem]"
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#C4161C] px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#FFFFFF] shadow-[0_18px_34px_-20px_rgba(196,22,28,0.72)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#09090B] disabled:cursor-not-allowed disabled:opacity-70 md:w-auto md:min-w-[13rem]"
                       >
                         <span>{isSubmitting ? "Submitting..." : "Submit Project Request"}</span>
                         <ArrowUpRight className="h-4 w-4" />

@@ -32,7 +32,7 @@ const INDUSTRIES = [
   {
     title: "Power Plants",
     description:
-      "Structural systems and civil infrastructure for large-scale power generation facilities.",
+      "PEB structural systems and civil infrastructure for large-scale power generation facilities.",
     image: "/industries we serve/Industries We Serve/power plant.jpg",
     imageAlt: "Power generation facility",
   },
@@ -204,7 +204,8 @@ export default function IndustriesShowcase() {
           </div>
 
           <p className="max-w-4xl text-base leading-7 text-[#E4E4E7] md:text-[1.15rem] md:leading-9">
-            We support multiple sectors with industrial construction capability
+            As a leading EPC contractor and PEB manufacturer in Chennai, we
+            support multiple sectors with industrial EPC construction capability
             tailored to metal, electronics, pharma, energy, and high-speed
             production environments.
           </p>

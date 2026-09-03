@@ -1,6 +1,7 @@
 "use client";
 import Navbar from "../components/Navbar";
 import IndustrialServicesUnified from "../components/IndustrialServicesUnified";
+import EngineeringPartnerCta from "../components/engineering-partner-cta/EngineeringPartnerCta";
 import IndustriesShowcase from "../components/IndustriesShowcase";
 import WhyChooseUs from "../components/WhyChooseUs";
 import WhyTopIndustries from "../components/WhyTopIndustries";
@@ -68,10 +69,9 @@ const PROJECT_TYPES = [
 ];
 
 const HERO_HIGHLIGHTS = [
-  "Complete Turnkey Factory Construction – From Design to Handover",
-  "Factory Construction Delivered in as Fast as 120 Days*",
-  "Advanced In-House Manufacturing for Superior Quality",
-  "Industrial EPC Contractor with ISO-Certified Standards",
+  "18+ Years of Engineering Expertise",
+  "10+ States Served Across India",
+  "ISO 9001:2015 Certified",
   "Dedicated Project Management for On-Time Delivery",
   "Trusted by 500+ Industrial & Manufacturing Clients",
 ] as const;
@@ -325,31 +325,29 @@ export default function Home() {
 
         <div className="relative z-20 mx-auto grid w-full max-w-7xl grid-cols-1 px-4 pb-10 sm:px-6 sm:pb-14 lg:grid-cols-2 lg:items-center lg:px-8">
           <div className="flex min-w-0 flex-col items-center justify-center py-8 text-center sm:items-start sm:text-left lg:max-w-2xl lg:py-12">
-          <div className="text-[0.72rem] font-semibold uppercase tracking-[0.38em] text-[#C4161C]">
+          {/* <div className="text-[0.72rem] font-semibold uppercase tracking-[0.38em] text-[#C4161C]">
               India&apos;s Trusted Factory &amp; EPC Partner
-            </div>
+            </div> */}
             <h1 className="hero-heading mt-5 text-balance drop-shadow-[0_14px_40px_rgba(9,9,11,0.46)]">
-              <span className="hero-heading-line text-[clamp(2rem,6.4vw,4.45rem)] leading-[1]">
-                <span className="hero-heading-brand inline-block !text-[#C4161C] normal-case tracking-[0.02em]">
-                  Turnkey
-                </span>{" "}
-                <span className="hero-heading-main inline-block !text-[#C4161C]">
-                  Factory Construction &
+              <span className="hero-heading-line text-[clamp(1.85rem,5.8vw,3.85rem)] leading-[1.02]">
+                <span className="hero-heading-main inline-block !font-bold !text-[#C4161C]">
+                  Stop Coordinating
+                  <br />
+                  with Six Vendors.
                 </span>
               </span>
-              <span className="hero-heading-line mt-2 text-[clamp(2.08rem,6.7vw,4.65rem)] leading-[0.98]">
-                <span className="hero-heading-main !font-medium">
-                  Industrial EPC Solutions
+              <span className="hero-heading-line mt-2 whitespace-nowrap text-[clamp(1.15rem,3.6vw,2.85rem)] leading-[1.08]">
+                <span className="hero-heading-main inline-block">
+                  One EPC Company Builds It All.
                 </span>
               </span>
             </h1>
             <p className="mt-5 max-w-xl text-[0.96rem] leading-7 text-white/84 md:text-[1rem] md:leading-8">
-              <span className="font-oswald tracking-[0.04em]">
-              Factory Construction Company for Manufacturing Plants, Industrial Buildings & Factory Sheds              </span>{" "}
-              &amp;{" "}
-              <span className="font-oswald tracking-[0.04em]">
-                Industrial Plant Builders
-              </span>
+              Mekark is an EPC company across South India. Manufacturing, pharma
+              and data infrastructure owners choose Mekark when their design has
+              to be right and the shed has to be standing on schedule. Design,
+              fabrication, civil and erection — run as a single turnkey
+              construction company, under one contract, with one number to call.
             </p>
 
             <ul className="mt-6 w-full max-w-xl space-y-2.5 text-left">
@@ -364,6 +362,16 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+
+            <div className="mt-7 flex w-full max-w-xl items-center justify-center gap-3 sm:justify-start">
+              <span
+                aria-hidden="true"
+                className="h-8 w-px flex-none bg-[#C4161C] sm:h-9"
+              />
+              <p className="text-[0.82rem] font-semibold uppercase tracking-[0.18em] text-white/90 sm:text-[0.88rem]">
+                One Team. One Contract. One Responsible Partner.
+              </p>
+            </div>
             {/* REVIEW BADGE */}
 
             <div className="mt-8 flex flex-col items-center gap-4 text-center sm:flex-row sm:items-center sm:text-left">
@@ -788,6 +796,10 @@ export default function Home() {
 
       <IndustrialServicesUnified />
 
+      {/* <FinalProjectCTA /> */}
+
+      <EngineeringPartnerCta />
+
       <IndustriesShowcase />
 
       <ProcessTimeline />
@@ -849,8 +861,6 @@ export default function Home() {
 
       {/* FAQ */}
       <FAQ />
-
-      <FinalProjectCTA />
 
       <ContactConversionSection />
 

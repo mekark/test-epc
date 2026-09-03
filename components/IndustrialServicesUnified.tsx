@@ -13,9 +13,9 @@ import {
 const SERVICES = [
   {
     number: "01",
-    title: "Turnkey Factory Construction",
+    title: "Turnkey EPC & Factory Construction",
     description:
-      "Complete factory construction services including planning, design, engineering, civil works, steel structures, and project handover.",
+      "Complete EPC construction services including planning, design, engineering, PEB fabrication, civil works, steel structures, and project handover.",
     scopes: [
       "Architectural Design",
       "Structural Engineering",
@@ -28,14 +28,14 @@ const SERVICES = [
     featured: true,
   },
   {
-    number: "02",
-    title: "Industrial Plant Builders",
+    number: "07",
+    title: "Industrial Plant Builders & EPC Contractors",
     description:
-      "Infrastructure solutions for heavy industries, process plants, and engineered production environments.",
+      "Infrastructure solutions from a trusted EPC contractor for heavy industries, process plants, and engineered production environments.",
     scopes: [
       "Process Plants",
       "Heavy Industry",
-      "Steel Facilities",
+      "EPC Contract",
       "Infrastructure",
     ],
     image:
@@ -43,7 +43,7 @@ const SERVICES = [
     imageAlt: "Industrial plant framework and process infrastructure",
   },
   {
-    number: "03",
+    number: "02",
     title: "Manufacturing Facility Construction",
     description:
       "Construction of modern manufacturing facilities designed for efficient production, future expansion, and operational excellence.",
@@ -58,22 +58,22 @@ const SERVICES = [
     imageAlt: "Modern manufacturing facility construction environment",
   },
   {
-    number: "04",
-    title: "Industrial Civil Works",
+    number: "03",
+    title: "PEB Manufacturing & Industrial Civil Works",
     description:
-      "Comprehensive civil works for factories, industrial buildings, and infrastructure projects with precision engineering.",
+      "Comprehensive PEB manufacturing and civil works for factories, industrial buildings, and infrastructure projects with precision engineering.",
     scopes: [
-      "Foundations",
-      "Structural Frames",
-      "Site Civil",
-      "Steel Infrastructure",
+      "PEB Manufacturing",
+      "Civil Works",
+      "Industrial Buildings",
+      "Infrastructure",
     ],
     image:
       "/Industrial%20Construction%20Services/Complete%20Industrial%20Construction%20Services/Industrial%20Civil.jpg",
     imageAlt: "Industrial civil works and slab construction",
   },
   {
-    number: "05",
+    number: "04",
     title: "Industrial Tank Construction",
     description:
       "ETP, STP, WTP, and custom industrial tank systems built for plant operations and storage.",
@@ -83,7 +83,7 @@ const SERVICES = [
     imageAlt: "Industrial tank and water system infrastructure",
   },
   {
-    number: "06",
+    number: "05",
     title: "Industrial MEP & Utility Systems",
     description:
       "Electrical, piping, mechanical, and utility infrastructure integrated for industrial uptime.",
@@ -93,13 +93,13 @@ const SERVICES = [
     imageAlt: "Industrial utility piping and plant systems",
   },
   {
-    number: "07",
-    title: "EOT Crane Structural Systems",
+    number: "06",
+    title: "EOT Crane & Mezzanine Flooring Systems",
     description:
-      "Structural solutions engineered for heavy-duty industrial cranes and manufacturing plants.",
+      "Structural solutions engineered for heavy-duty industrial cranes, mezzanine flooring, and manufacturing plants.",
     scopes: [
       "Crane Supports",
-      "Heavy Movement",
+      "Mezzanine Flooring",
       "Steel Structures",
       "Safe Operations",
     ],
@@ -368,7 +368,7 @@ export default function IndustrialServicesUnified() {
           ))}
         </div>
 
-        <motion.div
+        {/* <motion.div
           initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
           whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -400,7 +400,7 @@ export default function IndustrialServicesUnified() {
               ))}
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

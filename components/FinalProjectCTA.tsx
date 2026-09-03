@@ -10,7 +10,7 @@ export default function FinalProjectCTA() {
 
   return (
     <section className="relative z-20 overflow-visible bg-[#FFFFFF] pb-0 pt-4 md:pt-6">
-      <div className="container relative z-10 mx-auto max-w-7xl px-4">
+      <div className="relative z-10 w-full">
         <motion.div
           initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
           whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
@@ -19,24 +19,20 @@ export default function FinalProjectCTA() {
             duration: prefersReducedMotion ? 0 : 0.58,
             ease: EASE_OUT,
           }}
-          className="relative mx-auto -mb-10 max-w-5xl overflow-hidden rounded-[1.45rem] border border-[#E4E4E7]/12 bg-[#C4161C] px-5 py-6 shadow-[0_36px_90px_-54px_rgba(9,9,11,0.28)] sm:-mb-12 sm:px-6 md:-mb-20 md:rounded-[1.7rem] md:px-8 md:py-8"
+          className="relative mx-auto -mb-10 w-full overflow-hidden rounded-[1.45rem] border border-[#E4E4E7]/12 bg-[#C4161C] px-5 py-5 shadow-[0_36px_90px_-54px_rgba(9,9,11,0.28)] sm:-mb-12 sm:px-6 md:-mb-20 md:rounded-[1.7rem] md:px-8 md:py-6"
         >
           <div className="absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,#C4161C,transparent)]" />
 
-          <div className="grid gap-5 lg:grid-cols-2 lg:items-center lg:gap-8">
-            <div className="max-w-2xl">
-              <div className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-white/78">
-                Strategic Discussion
-              </div>
-              <h2 className="mt-3 text-[1.7rem] font-semibold tracking-[-0.03em] text-[#FFFFFF] sm:text-[2rem] md:text-[2.75rem] md:leading-[1.02]">
-                Discuss Your Industrial Project
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
+            <div className="max-w-none lg:flex-1">
+              <h2 className="text-[1.4rem] font-semibold tracking-[-0.02em] text-[#FFFFFF] sm:text-[1.6rem] md:text-[1.85rem] lg:text-[2.05rem] md:leading-[1.14]">
+                Limited Fabrication Slots for 2026 —
+                <br />
+                Book Your PEB Project with Chennai&apos;s Leading EPC Contractor Today
               </h2>
-              <p className="mt-3 max-w-2xl text-[0.92rem] leading-6 text-[#E4E4E7] sm:text-[0.98rem] sm:leading-7 md:text-base">
-                Speak with our team about your manufacturing facility, plant infrastructure, or turnkey construction requirement before submitting your project details.
-              </p>
             </div>
 
-            <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
+            <div className="flex flex-col items-end gap-3 lg:flex-none">
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#C4161C] shadow-[0_18px_34px_-22px_rgba(9,9,11,0.34)] transition-all duration-300 hover:scale-[1.02] hover:bg-[#F4F4F5] sm:px-7 sm:py-4 sm:text-sm"

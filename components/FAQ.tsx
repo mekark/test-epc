@@ -7,44 +7,44 @@ import { FAQ_BOLD_PHRASES, renderBoldPhrases } from "../lib/boldPhrases";
 
 const faqs = [
   {
-    q: "What makes Mekark different from other industrial civil construction companies?",
-    a: "Mekark is a trusted industrial civil construction company with expertise in industrial building construction, factory development, and infrastructure projects. We focus on engineering precision, transparent execution, and timely project delivery.",
+    q: "What makes Mekark one of the leading EPC companies in Chennai?",
+    a: "Mekark is a leading EPC company in Chennai with an in-house PEB manufacturing facility offering 40,000-ton annual capacity. As an industrial EPC contractor, we handle design, fabrication, civil works, and handover under one roof.",
   },
   {
-    q: "Can you handle large-scale factory and industrial construction projects?",
-    a: "Yes. As experienced industrial civil contractors and factory construction contractors, we execute manufacturing facilities, warehouses, industrial buildings, and large-scale infrastructure developments across India.",
+    q: "What is PEB, and why choose a PEB manufacturer like Mekark?",
+    a: "PEB (Pre-Engineered Building) is a steel system fabricated off-site, cutting construction time by 30–40%. As a PEB manufacturer in Chennai, our automated, ISO-certified production ensures consistent quality on every project.",
   },
   {
-    q: "Do you provide turnkey factory construction services?",
-    a: "Yes. Our turnkey factory construction solutions cover planning, engineering, civil works, project management, and execution, ensuring seamless delivery from concept to handover.",
+    q: "Do you work as an EPC contractor in Chennai and Coimbatore?",
+    a: "Yes. Mekark operates as an EPC contractor in Chennai and is also among the trusted EPC companies in Coimbatore, serving industrial clients across Tamil Nadu.",
   },
   {
-    q: "Do you specialize in manufacturing facility construction?",
-    a: "Absolutely. As a leading manufacturing facility construction company, we develop production plants, assembly units, processing facilities, and industrial campuses tailored to operational requirements.",
+    q: "Does Mekark offer turnkey EPC services?",
+    a: "Yes, as a turnkey construction company, we deliver a fully completed facility — design, civil, MEP, and commissioning — without the client managing separate vendors. We function as a complete EPC project contractor.",
   },
   {
-    q: "What types of industrial projects do you undertake?",
-    a: "We specialize in industrial facility construction, industrial factory construction, warehouses, utility buildings, commercial-industrial developments, and supporting infrastructure projects.",
+    q: "What industries does Mekark's EPC contracting company serve?",
+    a: "As an experienced EPC contracting company, we serve steel, electronics, chemical, power, automobile, pharma, FMCG, and textile sectors with tailored factory construction and PEB solutions.",
   },
   {
-    q: "Do you provide industrial infrastructure construction services?",
-    a: "Yes. Our industrial infrastructure construction services include site development, internal roads, drainage systems, utility networks, foundations, and factory support infrastructure.",
+    q: "Do you provide mezzanine flooring under your EPC construction services?",
+    a: "Yes. Our EPC construction services include mezzanine flooring, EOT crane structural systems, and heavy-duty steel frameworks, fabricated in-house alongside our PEB manufacturing.",
   },
   {
-    q: "Why choose Mekark as your industrial turnkey contractor?",
-    a: "As experienced industrial turnkey contractors, we provide single-point accountability, efficient project management, quality execution, and predictable outcomes for industrial construction projects.",
+    q: "How is Mekark different from other PEB contractors in Chennai?",
+    a: "Unlike most PEB contractors in Chennai who outsource fabrication, Mekark owns one of Tamil Nadu's largest PEB facilities with 400+ engineers — enabling 30–40% faster delivery.",
   },
   {
-    q: "Do you undertake factory building construction projects across India?",
-    a: "Yes. We deliver factory building construction projects for manufacturers and industrial businesses across Chennai, Tamil Nadu, and major industrial hubs throughout India.",
+    q: "What quality standards does Mekark follow as an industrial EPC contractor?",
+    a: "Our operations are ISO-certified, with rigorous quality protocols applied from steel production to final handover — ensuring safety and consistency on every EPC construction project.",
   },
   {
-    q: "Do you provide industrial foundation and civil work services?",
-    a: "Yes. Our team includes experienced industrial foundation contractors and industrial civil work contractors, delivering foundations, structural works, and critical civil infrastructure for industrial projects.",
+    q: "How long does a PEB or factory construction project take?",
+    a: "As a turnkey EPC contractor with automated in-house manufacturing, Mekark typically delivers projects 30–40% faster than conventional construction methods.",
   },
   {
-    q: "Do you provide RCC construction services for industrial buildings?",
-    a: "Yes. As established RCC building contractors, RCC construction contractors, and industrial RCC building contractors, we deliver durable reinforced concrete structures for factories, warehouses, and industrial facilities.",
+    q: "Why should I choose Mekark as my EPC company in Chennai?",
+    a: "We combine the reliability of an established EPC company in Chennai with automated PEB manufacturing and true turnkey construction company accountability — backed by 400+ engineers and a large fabrication facility.",
   },
 ];
 

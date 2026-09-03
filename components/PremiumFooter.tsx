@@ -102,8 +102,8 @@ export default function PremiumFooter() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(9,9,11,0.96)_100%)]" />
       </div>
 
-      <div className="container relative z-10 mx-auto max-w-7xl px-4 py-16 md:py-20">
-        <div className="pt-2 md:pt-4">
+      <div className="container relative z-10 mx-auto max-w-7xl px-4 py-12 md:py-16">
+        <div>
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:gap-14">
             {[
               <motion.div

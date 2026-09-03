@@ -5,10 +5,10 @@ import { Factory, Settings, Cpu, ShieldCheck, WatchIcon } from "lucide-react";
 
 const REASONS = [
   {
-    title: "3000+ MT High-Capacity Fabrication",
+    title: "40,000+ MT High-Capacity Fabrication",
     icon: Factory,
     description:
-      "One of the highest production capacities in the region for massive scale industrial demands.",
+      "One of the highest PEB manufacturing capacities in the region for massive scale industrial demands.",
   },
   {
     title: "Fully Automated Steel Production",
@@ -19,7 +19,8 @@ const REASONS = [
   {
     title: "Advanced CNC-Based Precision Engineering",
     icon: Cpu,
-    description: "High-accuracy fabrication for complex structural components.",
+    description:
+      "High-accuracy fabrication for complex structural components, backed by in-house EPC construction expertise.",
   },
   {
     title: "ISO-Certified Quality Systems",
@@ -31,7 +32,7 @@ const REASONS = [
     title: "30–40% Faster Project Delivery",
     icon: WatchIcon,
     description:
-      "Optimized workflows and in-house execution for rapid facility handover.",
+      "Optimized workflows and in-house execution for rapid turnkey facility handover — from EPC contractor to client, under one roof.",
   },
 ];
 
@@ -47,9 +48,10 @@ export default function WhyTopIndustries() {
           <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
             Why Top Industries Choose Mekark
           </h2>
-          <p className="text-zinc-400 max-w-2xl mx-auto font-light text-sm">
-            Leading the industrial construction sector with unmatched capacity
-            and precision.
+          <p className="text-zinc-400 max-w-3xl mx-auto font-light text-sm leading-relaxed">
+            Leading EPC companies trust Mekark for the industrial construction
+            sector&apos;s unmatched capacity and precision as a PEB manufacturer
+            and turnkey construction company.
           </p>
         </div>
 
