@@ -77,8 +77,6 @@ const HERO_HIGHLIGHTS = [
 ] as const;
 
 const FORM_ENDPOINT = "/api/enquiry-form";
-const THANK_YOU_URL =
-  "https://factorybuildingmanufacturer.mekark.com/thank-you";
 
 const validateForm = (values: FormValues): FormErrors => {
   const errors: FormErrors = {};
@@ -281,7 +279,7 @@ export default function Home() {
 
       setFormValues(INITIAL_FORM_VALUES);
 
-      window.location.assign(THANK_YOU_URL);
+      window.location.assign("/thank-you");
     } catch (error) {
       setStatusMessage({
         tone: "error",

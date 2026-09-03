@@ -46,7 +46,6 @@ const BUDGETS = [
 
 const EASE_OUT = [0.215, 0.61, 0.355, 1] as const;
 const FORM_ENDPOINT = "/api/enquiry-form";
-const THANK_YOU_URL = "https://www.mekark.com/thank-you";
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const LABEL_CLASSNAME =
   "mb-1.5 block text-[0.64rem] font-semibold uppercase tracking-[0.16em] text-[#18181B]";
@@ -254,7 +253,7 @@ export default function ContactConversionSection() {
       }
 
       setFormValues(INITIAL_FORM_VALUES);
-      window.location.assign(THANK_YOU_URL);
+      window.location.assign("/thank-you");
     } catch (error) {
       setStatusMessage({
         tone: "error",
