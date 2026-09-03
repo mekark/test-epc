@@ -328,16 +328,16 @@ export default function Home() {
           {/* <div className="text-[0.72rem] font-semibold uppercase tracking-[0.38em] text-[#C4161C]">
               India&apos;s Trusted Factory &amp; EPC Partner
             </div> */}
-            <h1 className="hero-heading mt-5 text-balance drop-shadow-[0_14px_40px_rgba(9,9,11,0.46)]">
-              <span className="hero-heading-line text-[clamp(1.85rem,5.8vw,3.85rem)] leading-[1.02]">
+            <h1 className="hero-heading mt-5 drop-shadow-[0_14px_40px_rgba(9,9,11,0.46)]">
+              <span className="hero-heading-line text-[clamp(2.35rem,7.2vw,4.75rem)] leading-[0.92]">
                 <span className="hero-heading-main inline-block !font-bold !text-[#C4161C]">
                   Stop Coordinating
                   <br />
                   with Six Vendors.
                 </span>
               </span>
-              <span className="hero-heading-line mt-2 whitespace-nowrap text-[clamp(1.15rem,3.6vw,2.85rem)] leading-[1.08]">
-                <span className="hero-heading-main inline-block">
+              <span className="hero-heading-line mt-3 text-[clamp(1.2rem,3.4vw,2.15rem)] leading-[1.05] tracking-[0.04em] text-white/92">
+                <span className="hero-heading-support inline-block !font-semibold">
                   One EPC Company Builds It All.
                 </span>
               </span>

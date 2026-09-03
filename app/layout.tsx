@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Manrope, Oswald } from "next/font/google";
 import Script from "next/script";
 import FloatingWhatsApp from "../components/FloatingWhatsApp";
 import SiteAmbientCubes from "../components/SiteAmbientCubes";
@@ -11,6 +11,13 @@ const manrope = Manrope({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-manrope",
+});
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-oswald-face",
+  weight: ["500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -36,7 +43,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </Script>
       </head>
       <body
-        className={`${manrope.variable} relative overflow-x-hidden font-sans antialiased`}
+        className={`${manrope.variable} ${oswald.variable} relative overflow-x-hidden font-sans antialiased`}
       >
         <noscript>
           <iframe
