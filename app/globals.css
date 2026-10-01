@@ -95,7 +95,7 @@ body {
   }
   .hero-section #consultation input,
   .hero-section #consultation select,
-  .hero-section #consultation textarea { font-size: 12px; }
+  .hero-section #consultation textarea { font-size: 14px; }
   .hero-section #consultation textarea { display: block; }
   .hero-layout > div:last-child:not(#consultation):not(.hero-copy) { flex-wrap: wrap; margin-top: 3px; }
   .hero-stats {

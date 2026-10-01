@@ -91,7 +91,7 @@ export default function HeroSection() {
           alt=""
           width={393}
           height={699}
-          sizes="(max-width: 639px) 393px, 1px"
+          sizes="(max-width: 639px) 200px, 1px"
           className="absolute right-0 top-[90px] max-w-none"
         />
         <Image
@@ -99,9 +99,8 @@ export default function HeroSection() {
           alt=""
           width={941}
           height={1672}
-          sizes="(max-width: 639px) 941px, 1px"
-          loading="eager"
-          fetchPriority="high"
+          sizes="(max-width: 639px) 470px, 1px"
+          priority
           className="absolute left-1/2 top-[15px] max-w-none -translate-x-1/2"
         />
         <Image
@@ -109,7 +108,7 @@ export default function HeroSection() {
           alt=""
           width={505}
           height={1556}
-          sizes="(max-width: 639px) 505px, 1px"
+          sizes="(max-width: 639px) 250px, 1px"
           className="absolute left-1/2 top-[419px] max-w-none -translate-x-1/2"
         />
         <div className="absolute inset-x-0 top-[284px] h-[1691px] bg-[rgba(15,15,15,.4)]" />
@@ -118,9 +117,8 @@ export default function HeroSection() {
           alt=""
           width={1028}
           height={1826}
-          sizes="(max-width: 639px) 1028px, 1px"
-          loading="eager"
-          fetchPriority="high"
+          sizes="(max-width: 639px) 514px, 1px"
+          priority
           className="absolute left-1/2 top-[-8px] max-w-none -translate-x-1/2"
         />
         <Image

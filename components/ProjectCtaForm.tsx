@@ -43,7 +43,7 @@ const PROJECT_SIZES = [
 const labelClass =
   "mb-1.5 block text-[14px] font-bold leading-normal tracking-[0.3px] text-[#5A5A5A] max-sm:sr-only";
 const fieldClass =
-  "h-[46px] w-full rounded-lg border border-[#E2E2E2] bg-[#F0F0F0] px-4 text-base text-[#2B2B2B] outline-none transition-colors sm:text-[12px] placeholder:text-[#757575] focus:border-[#C4161C] focus:bg-white";
+  "h-[46px] w-full rounded-lg border border-[#E2E2E2] bg-[#F0F0F0] px-4 text-[14px] text-[#2B2B2B] outline-none transition-colors sm:text-[12px] placeholder:text-[#757575] focus:border-[#C4161C] focus:bg-white";
 
 function validate(values: FormValues): FormErrors {
   const errors: FormErrors = {};
@@ -224,9 +224,9 @@ export default function ProjectCtaForm() {
                   name="projectType"
                   value={values.projectType}
                   onChange={handleChange}
-                  className={`${fieldClass} ${errors.projectType ? "border-[#C4161C]" : ""}`}
+                  className={`${fieldClass} ${values.projectType ? "" : "text-[#757575]"} ${errors.projectType ? "border-[#C4161C]" : ""}`}
                 >
-                  <option value="">Select your Industry</option>
+                  <option value="" className="text-[#2B2B2B]">Select your Industry</option>
                   {PROJECT_TYPES.map((item) => (
                     <option key={item} value={item}>{item}</option>
                   ))}
@@ -243,9 +243,9 @@ export default function ProjectCtaForm() {
                   name="sqft"
                   value={values.sqft}
                   onChange={handleChange}
-                  className={`${fieldClass} ${errors.sqft ? "border-[#C4161C]" : ""}`}
+                  className={`${fieldClass} ${values.sqft ? "" : "text-[#757575]"} ${errors.sqft ? "border-[#C4161C]" : ""}`}
                 >
-                  <option value="">Select Sq. Ft Requirement</option>
+                  <option value="" className="text-[#2B2B2B]">Select Sq. Ft Requirement</option>
                   {PROJECT_SIZES.map((item) => (
                     <option key={item} value={item}>{item}</option>
                   ))}

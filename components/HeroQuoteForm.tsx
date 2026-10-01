@@ -74,7 +74,7 @@ const LABEL_CLASSNAME =
   "mb-2 block text-sm font-medium text-white/80 max-sm:sr-only";
 
 const FIELD_CLASSNAME =
-  "h-[46px] w-full rounded-lg border border-[#E2E2E2] bg-[#F0F0F0] px-[18px] text-base text-[#2B2B2B] outline-none transition-colors sm:text-xs placeholder:text-[#757575] focus:border-[#C4161C] focus:bg-white";
+  "h-[46px] w-full rounded-lg border border-[#E2E2E2] bg-[#F0F0F0] px-[18px] text-[14px] text-[#2B2B2B] outline-none transition-colors sm:text-xs placeholder:text-[#757575] focus:border-[#C4161C] focus:bg-white";
 
 type FormFieldProps = {
   id: keyof FormValues;
@@ -287,11 +287,11 @@ export default function HeroQuoteForm() {
                   name="projectType"
                   value={formValues.projectType}
                   onChange={handleInputChange}
-                  className={`${FIELD_CLASSNAME} ${
+                  className={`${FIELD_CLASSNAME} ${formValues.projectType ? "" : "text-[#757575]"} ${
                     formErrors.projectType ? "border-[#FF6B6B]" : ""
                   }`}
                 >
-                  <option value="">Select your Industry type</option>
+                  <option value="" className="text-[#2B2B2B]">Select your Industry type</option>
                   {PROJECT_TYPES.map((projectType) => (
                     <option key={projectType} value={projectType}>
                       {projectType}
@@ -314,11 +314,11 @@ export default function HeroQuoteForm() {
                   name="sqft"
                   value={formValues.sqft}
                   onChange={handleInputChange}
-                  className={`${FIELD_CLASSNAME} ${
+                  className={`${FIELD_CLASSNAME} ${formValues.sqft ? "" : "text-[#757575]"} ${
                     formErrors.sqft ? "border-[#FF6B6B]" : ""
                   }`}
                 >
-                  <option value="">Select Sq.ft Requirement</option>
+                  <option value="" className="text-[#2B2B2B]">Select Sq.ft Requirement</option>
                   <option value="10,000 - 20,000 Sq.ft">10,000 - 20,000 Sq.ft</option>
                   <option value="20,000 - 30,000 Sq.ft">20,000 - 30,000 Sq.ft</option>
                   <option value="30,000 - 50,000 Sq.ft">30,000 - 50,000 Sq.ft</option>
@@ -341,7 +341,7 @@ export default function HeroQuoteForm() {
                 placeholder="Enter Requirement Details"
                 value={formValues.requirements}
                 onChange={handleInputChange}
-                className="w-full resize-none rounded-lg border border-[#E2E2E2] bg-[#F0F0F0] px-[18px] py-3 text-base max-sm:h-[46px] sm:px-4 text-[#2B2B2B] outline-none sm:text-xs placeholder:text-[#757575] focus:border-[#C4161C] focus:bg-white"
+                className="w-full resize-none rounded-lg border border-[#E2E2E2] bg-[#F0F0F0] px-[18px] py-3 text-[14px] max-sm:h-[46px] sm:px-4 text-[#2B2B2B] outline-none sm:text-xs placeholder:text-[#757575] focus:border-[#C4161C] focus:bg-white"
               />
             </div>
 
