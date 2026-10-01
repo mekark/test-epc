@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1017" height="1690" viewBox="0 0 1017 1690" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="div.absolute" d="M0 0H1017V1690H0V0Z" fill="url(#paint0_radial_0_24)" fill-opacity="0.25"/>
+<defs>
+<radialGradient id="paint0_radial_0_24" cx="0" cy="0" r="1" gradientTransform="matrix(1619.38 1084.86 -1161.73 1512.23 975.277 1181.05)" gradientUnits="userSpaceOnUse">
+<stop stop-color="#060606" stop-opacity="0"/>
+<stop offset="0.210092" stop-color="#060606" stop-opacity="0.482278"/>
+<stop offset="0.309256" stop-color="#060606" stop-opacity="0.72"/>
+<stop offset="0.443219" stop-color="#060606" stop-opacity="0.82"/>
+<stop offset="0.588534" stop-color="#060606"/>
+<stop offset="0.764314" stop-color="#060606"/>
+<stop offset="1" stop-color="#060606"/>
+</radialGradient>
+</defs>
+</svg>

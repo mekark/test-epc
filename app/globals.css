@@ -2,250 +2,147 @@
 
 @theme inline {
   --color-primary-dark: #18181B;
-  --color-hero-dark: #09090B;
-  --color-section-bg: #FAFAFA;
-  --color-border: #E4E4E7;
-  --color-muted-text: #52525B;
-  --color-accent: #C4161C;
-  --color-accent-hover: #C4161C;
-  --color-overlay: rgba(9, 9, 11, 0.62);
   --color-white: #FFFFFF;
-  
-  --font-oswald: var(--font-oswald-face), "Arial Narrow", sans-serif;
-  --font-inter: var(--font-manrope), "Segoe UI", sans-serif;
   --font-sans: var(--font-manrope), "Segoe UI", sans-serif;
-
-  @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-100%); }
-  }
-  @keyframes marquee-reverse {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(0); }
-  }
-
-  --animate-marquee: marquee 30s linear infinite;
-  --animate-marquee-reverse: marquee-reverse 30s linear infinite;
 }
-
 
 body {
   background-color: var(--color-white);
   color: var(--color-primary-dark);
 }
 
-@keyframes ambient-cube-rotate {
-  from {
-    transform: rotate(var(--cube-rotate-start, 0deg));
+.hero-copy { container-type: inline-size; container-name: hero-copy; }
+.hero-stats {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  max-width: 773px;
+  margin-top: 24px;
+  padding-block: 16px;
+  gap: 24px 16px;
+  border-top: 1px solid rgba(226, 226, 226, 0.5);
+}
+.hero-stat { min-width: 0; display: flex; flex-direction: column; gap: 5px; }
+.hero-stat-value {
+  margin: 0;
+  white-space: nowrap;
+  font-size: clamp(24px, 5.43cqi, 42px);
+  font-weight: 800;
+  line-height: 1.35;
+  color: white;
+}
+.hero-stat-label {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #9a9a9a;
+}
+@container hero-copy (min-width: 620px) {
+  .hero-stats {
+    grid-template-columns: 106fr 150fr 222fr 151fr;
+    column-gap: clamp(24px, 5.39cqi, 48px);
+    min-height: 117px;
   }
-
-  to {
-    transform: rotate(calc(var(--cube-rotate-start, 0deg) + 1turn));
-  }
+  .hero-stat-value { font-size: clamp(30px, 4.71cqi, 42px); }
+  .hero-stat-label { font-size: clamp(12px, 1.795cqi, 16px); white-space: nowrap; }
 }
 
-@keyframes ambient-cube-float {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-
-  50% {
-    transform: translate3d(0, var(--cube-float-distance, -12px), 0);
-  }
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
-@layer components {
-  .hero-heading {
-    font-family: var(--font-oswald), sans-serif;
-    font-weight: 700;
-    line-height: 0.92;
-    letter-spacing: -0.02em;
-    text-wrap: balance;
-    text-transform: uppercase;
-  }
-
-  .hero-heading-line {
-    display: block;
-  }
-
-  .hero-heading-brand {
-    font-family: var(--font-oswald), sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    line-height: 0.95;
-    color: #FFFFFF;
-  }
-
-  .hero-heading-main {
-    font-family: var(--font-oswald), sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.01em;
-    color: #FFFFFF;
-  }
-
-  .hero-heading-support {
-    font-family: var(--font-oswald), sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    color: rgba(255, 255, 255, 0.96);
-  }
-
-  .hero-eyebrow {
-    max-width: 19rem;
-    margin-inline: auto;
-    font-size: clamp(0.625rem, 2.15vw, 0.72rem);
-    font-weight: 600;
-    line-height: 1.65;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    text-wrap: balance;
-    color: #c4161c;
-  }
-
-  @media (min-width: 640px) {
-    .hero-eyebrow {
-      max-width: 28rem;
-      margin-inline: 0;
-      line-height: 1.55;
-      letter-spacing: 0.28em;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .hero-eyebrow {
-      max-width: none;
-      letter-spacing: 0.38em;
-    }
-  }
-
-  .ambient-cube-wrap {
+/* Mobile hero: Figma 8536:5520. */
+@media (max-width: 639px) {
+  .hero-section { overflow: clip; }
+  .hero-section > .hero-sky,
+  .hero-section > .hero-sky + div { display: none; }
+  .hero-mobile-background {
     position: absolute;
-    will-change: transform;
-    animation: ambient-cube-float var(--cube-float-duration, 14s) ease-in-out infinite;
-    animation-delay: var(--cube-delay, 0s);
-  }
-
-  .ambient-cube {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    border: 1.5px solid rgba(228, 228, 231, 0.34);
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.08),
-      rgba(255, 255, 255, 0.015)
-    );
-    box-shadow:
-      inset 0 0 0 1px rgba(255, 255, 255, 0.06),
-      0 0 30px rgba(9, 9, 11, 0.08);
-    transform-origin: center;
-    will-change: transform;
-    animation: ambient-cube-rotate var(--cube-duration, 36s) linear infinite;
-    animation-delay: var(--cube-delay, 0s);
-  }
-
-  .ambient-cube__inner,
-  .ambient-cube__core,
-  .ambient-cube__accent-bar {
-    position: absolute;
+    inset: 0;
+    z-index: -20;
     pointer-events: none;
+    background-image: url('/hero/mobile-shade.svg'), url('/hero/mobile-overlay.webp'),
+      linear-gradient(rgba(15,15,15,.4),rgba(15,15,15,.4)),
+      url('/hero/mobile-image23.webp'), url('/hero/mobile-image22.webp'), url('/hero/mobile-layer.webp');
+    background-repeat: no-repeat;
+    background-size: 1028px 100%, 1028px 1826px, 100% 1691px, 505px 1556px, 941px 1672px, 393px 699px;
+    background-position: center top, center -8px, center 284px, center 419px, center 15px, right 90px;
   }
-
-  .ambient-cube__inner {
-    inset: 14%;
-    border: 1.5px solid rgba(228, 228, 231, 0.3);
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.045),
-      rgba(255, 255, 255, 0)
-    );
+  .hero-heading-stage { position: relative; height: 291px; isolation: isolate; }
+  .hero-heading-stage::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 50px;
+    left: -20px;
+    right: -20px;
+    height: 216px;
+    background: linear-gradient(#060606,transparent 50%,#1e1e1e),
+      url('/hero/mobile-sky.webp') center center / cover no-repeat;
   }
-
-  .ambient-cube__core {
-    inset: 32%;
-    border: 1px solid rgba(228, 228, 231, 0.24);
+  .hero-heading-stage h1 { position: relative; z-index: 1; padding-top: 17px; letter-spacing: normal; }
+  .hero-mobile-building {
+    position: absolute;
+    top: 53px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 20px);
+    max-width: 420px;
+    height: 257px;
+    object-fit: contain;
   }
-
-  .ambient-cube__accent-bar {
-    background: rgba(196, 22, 28, 0.86);
-    box-shadow: 0 0 14px rgba(196, 22, 28, 0.28);
+  .hero-section #consultation {
+    width: calc(100% - 32px);
+    margin-top: 24px;
+    padding: 24px 20px;
+    background: rgba(255,255,255,.01);
+    box-shadow: 0 26px 88px rgba(0,0,0,.06);
   }
-
-  .ambient-cube__accent-bar--x {
-    left: 10%;
-    right: 10%;
-    top: 10%;
-    height: 1.5px;
+  .hero-section #consultation input,
+  .hero-section #consultation select,
+  .hero-section #consultation textarea { font-size: 12px; }
+  .hero-section #consultation textarea { display: block; }
+  .hero-layout > div:last-child:not(#consultation):not(.hero-copy) { flex-wrap: wrap; margin-top: 3px; }
+  .hero-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 13px;
+    padding-block: 0;
+    gap: 14px 12px;
+    border-top: 0;
   }
-
-  .ambient-cube__accent-bar--y {
-    bottom: 10%;
-    top: 10%;
-    right: 10%;
-    width: 1.5px;
+  .hero-stat {
+    gap: 4px;
+    padding: 12px clamp(10px, 5.1vw, 20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    background: #1a1a1a;
   }
-
-  .ambient-cube--accent {
-    border-color: rgba(196, 22, 28, 0.44);
-    box-shadow:
-      inset 0 0 0 1px rgba(196, 22, 28, 0.14),
-      0 0 34px rgba(196, 22, 28, 0.1);
-  }
-
-  .ambient-cube--accent .ambient-cube__inner {
-    border-color: rgba(196, 22, 28, 0.36);
-  }
-
-  .ambient-cube--accent .ambient-cube__core {
-    border-color: rgba(196, 22, 28, 0.3);
-  }
-
-  .ambient-cube--steel {
-    border-color: rgba(228, 228, 231, 0.34);
-    box-shadow:
-      inset 0 0 0 1px rgba(255, 255, 255, 0.05),
-      0 0 28px rgba(9, 9, 11, 0.07);
-  }
-
-  .ambient-cube--steel .ambient-cube__inner {
-    border-color: rgba(228, 228, 231, 0.3);
-  }
-
-  .ambient-cube--steel .ambient-cube__core {
-    border-color: rgba(228, 228, 231, 0.2);
-  }
-
-  .ambient-cube--ghost {
-    border-color: rgba(24, 24, 27, 0.24);
-    box-shadow:
-      inset 0 0 0 1px rgba(24, 24, 27, 0.08),
-      0 0 26px rgba(9, 9, 11, 0.06);
-  }
-
-  .ambient-cube--ghost .ambient-cube__inner {
-    border-color: rgba(24, 24, 27, 0.2);
-  }
-
-  .ambient-cube--ghost .ambient-cube__core {
-    border-color: rgba(24, 24, 27, 0.16);
-  }
-
-  .ambient-cube-wrap--reverse .ambient-cube {
-    animation-direction: reverse;
-  }
+  .hero-stat-value { font-size: clamp(20px, 6.15vw, 24px); line-height: normal; }
+  .hero-stat-label { font-size: 10px; line-height: normal; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .ambient-cube-wrap,
-  .ambient-cube {
-    animation: none;
-  }
+/* The wide hero follows the 1920px Figma frame; smaller screens flow naturally. */
+@media (min-width: 1800px) {
+  .hero-section { min-height: 951px; padding-top: 97px; padding-bottom: 97px; }
+  .hero-layout { max-width: 1760px; padding-inline: 0; grid-template-columns: minmax(0, 891px) 659px; column-gap: 148px; }
+  .hero-layout h1 { letter-spacing: normal; }
+  .hero-layout > div:first-child > div:first-child > p { min-height: 59px; }
+  .hero-highlights { grid-template-columns: max-content max-content; }
+  .hero-trust { height: 138px; }
+  .hero-trust > p { margin-left: 10px; }
+  .hero-trust > div { margin-top: 27px; display: flex; justify-content: space-between; gap: 0; }
+  .hero-trust > div > div { width: 90px; flex-shrink: 0; }
+  .hero-building { width: 1365px; right: -129px; top: 144px; bottom: auto; }
+  .hero-sky { object-position: right top; }
+  .hero-section #consultation { margin-top: 50px; padding: 44px 50px; }
+  .hero-section #consultation h2 { font-size: 24px; font-weight: 800; }
+  .hero-section #consultation > div > p { font-size: 14px; color: #080808; }
+  .hero-section #consultation form { margin-top: 26px; }
+  .hero-section #consultation form > .grid { column-gap: 35px; }
+  .hero-section #consultation label { font-weight: 700; color: white; }
+  .hero-section #consultation input,
+  .hero-section #consultation select { height: 49px; }
+  .hero-section #consultation textarea { height: 83px; }
+  .hero-section #consultation button { font-size: 18px; }
+  .hero-section #consultation form > p { font-size: 12px; }
 }
