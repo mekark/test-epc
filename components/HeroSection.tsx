@@ -92,6 +92,7 @@ export default function HeroSection() {
           width={393}
           height={699}
           sizes="(max-width: 639px) 200px, 1px"
+          priority
           className="absolute right-0 top-[90px] max-w-none"
         />
         <Image
