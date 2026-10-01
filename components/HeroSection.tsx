@@ -304,6 +304,21 @@ export default function HeroSection() {
 
   return (
     <section className="hero-section relative isolate w-full overflow-visible bg-[#060606] pb-10 pt-24 text-white sm:pb-12 sm:pt-28 lg:pb-10 lg:pt-32">
+      {/* Background images can't take fetchpriority, so preload the mobile LCP layers (hoisted to <head> by React 19). */}
+      <link
+        rel="preload"
+        as="image"
+        href="/hero/mobile-image22.webp"
+        media="(max-width: 639px)"
+        fetchPriority="high"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/hero/mobile-overlay.webp"
+        media="(max-width: 639px)"
+        fetchPriority="high"
+      />
       <div className="hero-mobile-background" aria-hidden="true" />
       <Image
         src="/hero/industrial-crane-bg.webp"
@@ -337,9 +352,9 @@ export default function HeroSection() {
               src="/hero/mobile-building.webp"
               alt=""
               aria-hidden="true"
-              width={1226}
-              height={855}
-              sizes="100vw"
+              width={420}
+              height={293}
+              sizes="(max-width: 639px) 420px, 1px"
               className="hero-mobile-building sm:hidden"
             />
 
