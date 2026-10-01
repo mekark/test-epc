@@ -61,12 +61,7 @@ body {
     inset: 0;
     z-index: -20;
     pointer-events: none;
-    background-image: url('/hero/mobile-shade.svg'), url('/hero/mobile-overlay.webp'),
-      linear-gradient(rgba(15,15,15,.4),rgba(15,15,15,.4)),
-      url('/hero/mobile-image23.webp'), url('/hero/mobile-image22.webp'), url('/hero/mobile-layer.webp');
-    background-repeat: no-repeat;
-    background-size: 1028px 100%, 1028px 1826px, 100% 1691px, 505px 1556px, 941px 1672px, 393px 699px;
-    background-position: center top, center -8px, center 284px, center 419px, center 15px, right 90px;
+    overflow: hidden;
   }
   .hero-heading-stage { position: relative; height: 291px; isolation: isolate; }
   .hero-heading-stage::before {
