@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   experimental: {
     inlineCss: true,
   },
+  images: { qualities: [50, 75] },
   // Drop Next's built-in legacy polyfills (Array.prototype.at/flat, Object.hasOwn, ...).
   // Safe because browserslist targets modern browsers only.
   turbopack: {

@@ -93,6 +93,7 @@ export default function HeroSection() {
           height={699}
           sizes="(max-width: 639px) 200px, 1px"
           priority
+          fetchPriority="high"
           className="absolute right-0 top-[90px] max-w-none"
         />
         <Image
@@ -100,8 +101,9 @@ export default function HeroSection() {
           alt=""
           width={941}
           height={1672}
-          sizes="(max-width: 639px) 470px, 1px"
-          priority
+          sizes="(max-width: 639px) 400px, 1px"
+          quality={50}
+          loading="eager"
           className="absolute left-1/2 top-[15px] max-w-none -translate-x-1/2"
         />
         <Image
@@ -109,7 +111,8 @@ export default function HeroSection() {
           alt=""
           width={505}
           height={1556}
-          sizes="(max-width: 639px) 250px, 1px"
+          sizes="(max-width: 639px) 220px, 1px"
+          quality={50}
           className="absolute left-1/2 top-[419px] max-w-none -translate-x-1/2"
         />
         <div className="absolute inset-x-0 top-[284px] h-[1691px] bg-[rgba(15,15,15,.4)]" />
@@ -118,8 +121,9 @@ export default function HeroSection() {
           alt=""
           width={1028}
           height={1826}
-          sizes="(max-width: 639px) 514px, 1px"
-          priority
+          sizes="(max-width: 639px) 400px, 1px"
+          quality={50}
+          loading="eager"
           className="absolute left-1/2 top-[-8px] max-w-none -translate-x-1/2"
         />
         <Image
@@ -136,7 +140,7 @@ export default function HeroSection() {
         aria-hidden="true"
         fill
         priority
-        sizes="100vw"
+        sizes="(max-width: 639px) 1px, 100vw"
         className="hero-sky absolute inset-0 -z-30 h-full w-full object-cover object-center blur-[2px]"
       />
       <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,#060606_24.831%,rgba(6,6,6,0.8)_42.674%,rgba(6,6,6,0)_88.021%)] max-sm:bg-none max-sm:bg-[rgba(6,6,6,0.65)]" />
@@ -147,7 +151,7 @@ export default function HeroSection() {
         width={1244}
         height={867}
         priority
-        sizes="72vw"
+        sizes="(max-width: 1023px) 1px, 72vw"
         className="hero-building pointer-events-none absolute -bottom-[7%] right-[-6%] -z-10 hidden w-[72%] max-w-none object-contain lg:block"
       />
 
@@ -210,7 +214,7 @@ export default function HeroSection() {
             ))}
           </ul>
 
-          <div className="hero-trust relative z-10 mt-[13px] w-full max-w-[847px] overflow-hidden rounded-[18px] max-sm:rounded-[10px] max-sm:bg-[linear-gradient(175.67deg,#08090A_1.29%,#654528_91.18%)] max-sm:py-6 sm:mt-6 bg-[linear-gradient(180deg,#060606_0.18%,rgba(105,63,29,0.5)_99.82%)] px-4 py-5 backdrop-blur-[500px] sm:px-8">
+          <div className="hero-trust relative z-10 mt-[13px] w-full max-w-[847px] overflow-hidden rounded-[18px] max-sm:rounded-[10px] max-sm:bg-[linear-gradient(175.67deg,#08090A_1.29%,#654528_91.18%)] max-sm:py-6 sm:mt-6 bg-[linear-gradient(180deg,#060606_0.18%,rgba(105,63,29,0.5)_99.82%)] px-4 py-5 backdrop-blur-[500px] max-sm:backdrop-blur-none sm:px-8">
             <p className="text-[14px] font-semibold uppercase leading-5 text-[#ED1D23] sm:text-[#FA7783]">
               Trusted across India
             </p>
