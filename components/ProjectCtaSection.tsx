@@ -53,7 +53,7 @@ export default function ProjectCtaSection() {
             {BENEFITS.map((benefit) => (
               <li
                 key={benefit}
-                className="flex items-center gap-[10px] whitespace-nowrap text-[14px] font-normal leading-normal sm:gap-[13px] sm:whitespace-normal sm:text-[20px] sm:font-semibold sm:leading-[27px]"
+                className="flex min-w-0 items-start gap-[10px] text-[14px] font-normal leading-normal sm:gap-[13px] sm:text-[20px] sm:font-semibold sm:leading-[27px]"
               >
                 <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-[rgba(196,22,28,0.5)] text-[15px] sm:size-[37px] sm:text-[18px] sm:font-bold">
                   ✓

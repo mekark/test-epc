@@ -66,7 +66,7 @@ export default function ManagedProcessSection() {
   return (
     <section
       aria-labelledby="managed-process-title"
-      className="overflow-hidden bg-[#F9F6F7] px-4 py-8 sm:px-6 sm:py-14 lg:px-10 lg:py-20"
+      className="overflow-hidden bg-[#F9F6F7] px-5 py-8 sm:px-6 sm:py-14 lg:px-10 lg:py-20"
     >
       <div className="mx-auto w-full max-w-[1760px]">
         <header className="flex flex-col items-start gap-3 sm:gap-[10px]">
@@ -77,7 +77,7 @@ export default function ManagedProcessSection() {
             From Idea to Operation{" "}
             <span className="text-[#ED1D23]">Fully Managed</span>
           </h2>
-          <p className="w-full text-center text-[14px] leading-5 text-[#64748B] sm:w-auto sm:text-left sm:text-[clamp(1rem,2vw,1.5rem)] sm:leading-snug">
+          <p className="w-full text-left text-[14px] leading-5 text-[#64748B] sm:w-auto sm:text-[clamp(1rem,2vw,1.5rem)] sm:leading-snug">
             Text
           </p>
         </header>

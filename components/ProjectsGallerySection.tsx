@@ -44,7 +44,7 @@ export default function ProjectsGallerySection() {
           >
             Projects <span className="text-[#ED1D23]">Gallery</span>
           </h2>
-          <p className="max-w-[307px] text-[14px] font-normal leading-normal text-[#64748B] sm:mt-[14px] sm:max-w-none sm:text-[clamp(1rem,2vw,1.5rem)] sm:font-medium sm:leading-relaxed">
+          <p className="max-sm:whitespace-nowrap text-[clamp(10px,3.2vw,14px)] font-normal leading-normal text-[#64748B] sm:mt-[14px] sm:max-w-none sm:text-[clamp(1rem,2vw,1.5rem)] sm:font-medium sm:leading-relaxed">
             Completed EPC structures across Tamil Nadu and beyond.
           </p>
         </header>
